@@ -1,4 +1,4 @@
 User-agent: *
-Sitemap: https://iammarcogiannini.github.io/sitemap.xml
+Sitemap: https://iammarcogiannini.github.io//sitemap.xml
 Disallow: /ghost/
 Disallow: /p/

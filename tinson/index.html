@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Tinson 🤖 - Un title manager per Tinfoil fatto con Node e ❤️</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css?v=29f434ed97" />
+
+    <link rel="shortcut icon" href="/favicon.png" type="image/png" />
+    <link rel="canonical" href="https://iammarcogiannini.github.io/tinson/" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <link rel="amphtml" href="https://iammarcogiannini.github.io/tinson/amp/" />
+    
+    <meta property="og:site_name" content="Marco Giannini" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Tinson 🤖 - Un title manager per Tinfoil fatto con Node e ❤️" />
+    <meta property="og:description" content="Tinson è una semplice web app per gestire una lista di file .nsp su Nintendo Switch senza l&#x27;utilizzo di cavi o PC" />
+    <meta property="og:url" content="https://iammarcogiannini.github.io/tinson/" />
+    <meta property="og:image" content="https://iammarcogiannini.github.io/content/images/2019/10/tinfoil-background-image.jpg" />
+    <meta property="article:published_time" content="2019-10-18T15:25:56.000Z" />
+    <meta property="article:modified_time" content="2019-10-21T14:09:43.000Z" />
+    <meta property="article:tag" content="Tutti i miei lavori" />
+    <meta property="article:tag" content="React" />
+    <meta property="article:tag" content="Web-App" />
+    
+    <meta property="article:author" content="https://www.facebook.com/gianno15" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Tinson 🤖 - Un title manager per Tinfoil fatto con Node e ❤️" />
+    <meta name="twitter:description" content="Tinson è una semplice web app per gestire una lista di file .nsp su Nintendo Switch senza l&#x27;utilizzo di cavi o PC" />
+    <meta name="twitter:url" content="https://iammarcogiannini.github.io/tinson/" />
+    <meta name="twitter:image" content="https://iammarcogiannini.github.io/content/images/2019/10/tinfoil-background-image.jpg" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Marco Giannini" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="Tutti i miei lavori, React, Web-App" />
+    <meta property="og:image:width" content="2000" />
+    <meta property="og:image:height" content="1333" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Marco Giannini",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://iammarcogiannini.github.io/favicon.png",
+            "width": 60,
+            "height": 60
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Marco Giannini",
+        "image": {
+            "@type": "ImageObject",
+            "url": "//www.gravatar.com/avatar/028246b7ddf31cfc3787944b4873130d?s=250&d=mm&r=x",
+            "width": 250,
+            "height": 250
+        },
+        "url": "https://iammarcogiannini.github.io/author/marco/",
+        "sameAs": [
+            "https://www.facebook.com/gianno15"
+        ]
+    },
+    "headline": "Tinson 🤖 - Un title manager per Tinfoil fatto con Node e ❤️",
+    "url": "https://iammarcogiannini.github.io/tinson/",
+    "datePublished": "2019-10-18T15:25:56.000Z",
+    "dateModified": "2019-10-21T14:09:43.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://iammarcogiannini.github.io/content/images/2019/10/tinfoil-background-image.jpg",
+        "width": 2000,
+        "height": 1333
+    },
+    "keywords": "Tutti i miei lavori, React, Web-App",
+    "description": "Tinson è una semplice web app per gestire una lista di file .nsp su Nintendo Switch senza l&#x27;utilizzo di cavi o PC",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://iammarcogiannini.github.io/"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 2.31" />
+    <link rel="alternate" type="application/rss+xml" title="Marco Giannini" href="https://iammarcogiannini.github.io/rss/" />
+
+</head>
+<body class="post-template tag-tutti-i-miei-lavori tag-react tag-web-app">
+
+    <div class="site-wrapper">
+
+        
+
+<header class="site-header outer">
+    <div class="inner">
+        <nav class="site-nav">
+    <div class="site-nav-left">
+                <a class="site-nav-logo" href="https://iammarcogiannini.github.io">Marco Giannini</a>
+            <ul class="nav" role="menu">
+    <li class="nav-home" role="menuitem"><a href="https://iammarcogiannini.github.io/">Home</a></li>
+</ul>
+
+    </div>
+    <div class="site-nav-right">
+        <div class="social-links">
+        </div>
+            <a class="rss-button" href="https://feedly.com/i/subscription/feed/https://iammarcogiannini.github.io/rss/" title="RSS" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="6.18" cy="17.82" r="2.18"/><path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"/></svg>
+</a>
+    </div>
+</nav>
+    </div>
+</header>
+
+
+<main id="site-main" class="site-main outer">
+    <div class="inner">
+
+        <article class="post-full post tag-tutti-i-miei-lavori tag-react tag-web-app ">
+
+            <header class="post-full-header">
+                <section class="post-full-meta">
+                    <time class="post-full-meta-date" datetime="2019-10-18">18 ottobre 2019</time>
+                        <span class="date-divider">/</span> <a href="/tag/tutti-i-miei-lavori/">Tutti i miei lavori</a>
+                </section>
+                <h1 class="post-full-title">Tinson 🤖 - Un title manager per Tinfoil fatto con Node e ❤️</h1>
+            </header>
+
+            <figure class="post-full-image">
+                <img
+                    srcset="/content/images/size/w300/2019/10/tinfoil-background-image.jpg 300w,
+                            /content/images/size/w600/2019/10/tinfoil-background-image.jpg 600w,
+                            /content/images/size/w1000/2019/10/tinfoil-background-image.jpg 1000w,
+                            /content/images/size/w2000/2019/10/tinfoil-background-image.jpg 2000w"
+                    sizes="(max-width: 800px) 400px,
+                            (max-width: 1170px) 700px,
+                            1400px"
+                    src="/content/images/size/w2000/2019/10/tinfoil-background-image.jpg"
+                    alt="Tinson 🤖 - Un title manager per Tinfoil fatto con Node e ❤️"
+                />
+            </figure>
+
+            <section class="post-full-content">
+                <div class="post-content">
+                    <p>Sono un appassionato di gaming. In effetti lo sono sempre stato. Ricordo già da piccolo l'attesa, quando mia madre mi faceva giocare soltanto un'ora a settimana, il sabato, alla mia console.</p><p>Sono passati molti anni, e ormai mia madre non può più darmi limiti sul tempo di gioco. Sono costretto a darmeli da solo, e non sempre ci riesco. </p><p>Sorvolando sulle ore che dedico alle console questo piccolo portfolio parlerà più che altro della passione che dedico alla scena hack delle console, più precisamente quella di Nintendo Switch che reputo una delle console più divertenti. </p><p>Dopo circa un anno dal suo rilascio ormai la Switch era già stata hackerata completamente fino a farci girare anche giochi non firmati. Un record mondiale. Non dei migliori ma comunque un record.</p><p>Fatto sta che tutti i tools per installare <a href="https://it.wikipedia.org/wiki/Homebrew_(informatica)">homebrew</a> (parti di software sviluppati da sviluppatori indipendenti e nella maggior parte delle volte rilasciati al pubblico gratuitamente) richiedevano di rimuovere la micro SD dalla Switch, inserirla nel proprio PC (o come nel mio caso nel Mac, causando altri problemi), trasferire l'homebrew e dopodiché reinserire la micro SD nella Switch e riaccenderla tramite uno dei molti metodi del <u><em><a href="https://switch.homebrew.guide/gettingstarted/beforestarting#fusee-gelee">fusee gelee</a></em></u>. </p><p>Questa procedura per me è estenuante, non uso quasi mai il Mac quando sono a casa. Ho una gatta che monta sopra qualsiasi cosa e finché non la tolgo non smette, quindi tirare fuori il mac, collegare l'adattatore per la micro SD (etc etc) diventa noioso. Potrei chiudere il gatto in una scatola per farlo diventare come quello di <em><strong>Schrödinger </strong></em>ma ho preferito sviluppare una piccola web app in React per creare un JSON supportato da Tinfoil (un homebrew installer famoso su Switch) per poter installare homebrew da remoto, ad esempio caricandoli su Google Drive.</p><h2 id="qui-nasce-tinson-">Qui nasce Tinson 🤖</h2><p>Inizialmente nato come un progetto in PHP con il front-end fatto con Materialize, si è evoluto dopo qualche mese in una web app fatta in React e Node. </p><p>L'evoluzione è stata naturale, la versione PHP aveva bisogno di essere installata in un server che lo supportasse da ogni utente che volesse utilizzarla. </p><p><em>Il mio obiettivo principale era rilasciare qualcosa che potesse essere utilizzata da tutti, ero convinto che potesse essere utile e quindi non volevo subito piazzare un muro del genere solo per iniziare a utilizzarla.</em></p><p>Così ho pensato di creare una vera e propria web app con <strong><a href="https://it.reactjs.org/">React</a></strong> (front-end), <strong><a href="https://nodejs.org/it/">Node</a></strong> (back-end), <strong><a href="https://expressjs.com/it/">Express</a></strong> e <strong><a href="https://www.mongodb.com/it">MongoDB</a></strong> (database) gestito tramite <strong><a href="https://mongoosejs.com/">Mongoose</a></strong>. <br>Autenticazione e sessione dell'utente gestito tramite JWT. <br>Il tutto hostato gratuitamente sulla super piattaforma: <strong><a href="https://heroku.com">Heroku</a></strong>.</p><h2 id="il-funzionamento-del-software">Il funzionamento del software </h2><p>è molto semplice. Tinfoil ha bisogno di un file JSON ben preciso da elaborare. </p><!--kg-card-begin: image--><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://iammarcogiannini.github.io/content/images/2019/10/tinfoil-example-2.png" class="kg-image"><figcaption>Esempio di come è strutturato un JSON da passare a Tinfoil.</figcaption></figure><!--kg-card-end: image--><h3 id="creazione-di-un-utente">Creazione di un utente</h3><!--kg-card-begin: markdown--><p>Durante la creazione dell'utente viene creato un entry su MongoDB con:</p>
+<ol>
+<li>Nome utente</li>
+<li>Password criptata</li>
+<li>ID univoco dell'utente (generato automaticamente da MongoDB)</li>
+</ol>
+<!--kg-card-end: markdown--><p>L'utente può quindi loggarsi successivamente e ripescare tutta la lista dei files caricati.</p><h3 id="dashboard">Dashboard</h3><p>Nella dashboard l'utente può scegliere se caricare un singolo link oppure direttamente un'intera cartella di Google Drive. <br>Oltre questo l'utente può impostarsi anche il messaggio di benvenuto, anche se, per evitare problemi imposto sempre obbligatoriamente il messaggio di avviso contro la pirateria (uno strano doppio senso).</p><h3 id="collegamento-con-la-nintendo-switch">Collegamento con la Nintendo Switch</h3><p>Nella dashboard viene subito stampato a schermo un link composto dalla versione delle API corrente e dopo l'id univoco dell'utente. </p><!--kg-card-begin: markdown--><p>Ad esempio <code>tinson.herokuapp.com/v1/ID_UNIVOCO_UTENTE</code></p>
+<!--kg-card-end: markdown--><p>Basterà quindi copiare questo link su Tinfoil per visualizzare tutti gli homebrew sulla propria Nintendo Switch.</p><p>In seguito ad ogni aggiornamento della lista su Tinson verrà automaticamente aggiornata anche su Tinfoil senza dover reinserire l'url precedente. </p><h3 id="fonti-e-link-alternativi">Fonti e link alternativi</h3><p>È possibile replicare una propria istanza di Tinson senza alcun problema clonando la repository da Github per poi effettuare un push sul vostro account Heroku. Su Github trovate istruzioni più chiare su come farlo. </p><p>Nel frattempo vi lascio comunque il link da cui poter utilizzare la mia versione attualmente online.</p><p>🤖 <a href="tinson.herokuapp.com">Tinson - Heroku</a></p><p>Inserisco di seguito i link in cui parlano online di Tinson, per poter leggere pareri di altre persone del settore.</p><p>🔗 <a href="https://gbatemp.net/threads/tinson-a-website-for-install-nsp-directly-on-switch-with-tinfoil.544238/">Gbatemp - Tinson A Website for install NSP directly on Switch with Tinfoil</a><br>🔗 <a href="https://www.reddit.com/r/SwitchHaxing/comments/cl1h3v/i_developed_a_tool_for_create_your_own_hbg_shop/">r/SwitchHaxing - I developed a tool for create your own /hbg/ Shop</a><br>🔗 <a href="https://github.com/gianemi2/tinson-node">Github - A Tinfoil Title manager made with Node (and love)</a></p>
+                </div>
+            </section>
+
+
+            <footer class="post-full-footer">
+
+
+                    
+<section class="author-card">
+        <img class="author-profile-image" src="//www.gravatar.com/avatar/028246b7ddf31cfc3787944b4873130d?s&#x3D;250&amp;d&#x3D;mm&amp;r&#x3D;x" alt="Marco Giannini" />
+    <section class="author-card-content">
+        <h4 class="author-card-name"><a href="/author/marco/">Marco Giannini</a></h4>
+            <p>Ciao! Piacere, sono Marco Giannini e sono un Front-end developer. Sto lavorando un sacco con PHP e WordPress ma AMO JavaScript e React. Ogni tanto pusho su Github qualcuno dei miei assurdi progetti 🥴</p>
+    </section>
+</section>
+<div class="post-full-footer-right">
+    <a class="author-card-button" href="/author/marco/">Read More</a>
+</div>
+
+
+            </footer>
+
+
+        </article>
+
+    </div>
+</main>
+
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+                <article class="read-next-card"
+                        style="background-image: url(/content/images/size/w600/2019/10/samuel-zeller-379406-1-1.jpg)"
+                >
+                    <header class="read-next-card-header">
+                        <small class="read-next-card-header-sitetitle">&mdash; Marco Giannini &mdash;</small>
+                        <h3 class="read-next-card-header-title"><a href="/tag/tutti-i-miei-lavori/">Tutti i miei lavori</a></h3>
+                    </header>
+                    <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
+</div>
+                    <div class="read-next-card-content">
+                        <ul>
+                            <li><a href="/pokemon-quest-wiki-app/">Pokemon Quest Wiki App: La mia prima app in Cordova 👾</a></li>
+                            <li><a href="/snake-in-javascript/">Snake in JavaScript 🐍</a></li>
+                        </ul>
+                    </div>
+                    <footer class="read-next-card-footer">
+                        <a href="/tag/tutti-i-miei-lavori/">See all 2 posts →</a>
+                    </footer>
+                </article>
+
+
+                <article class="post-card post tag-tutti-i-miei-lavori tag-javascript tag-app-tag ">
+
+    <a class="post-card-image-link" href="/pokemon-quest-wiki-app/">
+        <img class="post-card-image"
+            srcset="/content/images/size/w300/2019/09/jay-dkFJST9zZZo-unsplash.jpg 300w,
+                    /content/images/size/w600/2019/09/jay-dkFJST9zZZo-unsplash.jpg 600w,
+                    /content/images/size/w1000/2019/09/jay-dkFJST9zZZo-unsplash.jpg 1000w,
+                    /content/images/size/w2000/2019/09/jay-dkFJST9zZZo-unsplash.jpg 2000w"
+            sizes="(max-width: 1000px) 400px, 700px"
+            src="/content/images/size/w600/2019/09/jay-dkFJST9zZZo-unsplash.jpg"
+            alt="Pokemon Quest Wiki App: La mia prima app in Cordova 👾"
+        />
+    </a>
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="/pokemon-quest-wiki-app/">
+
+            <header class="post-card-header">
+                    <span class="post-card-tags">Tutti i miei lavori</span>
+                <h2 class="post-card-title">Pokemon Quest Wiki App: La mia prima app in Cordova 👾</h2>
+            </header>
+
+            <section class="post-card-excerpt">
+                <p>Photo by Jay on Unsplash Eccomi nuovamente con un altro dei miei esperimenti.  Questa volta non si trattava solo di studio ma volevo concludere questo progetto per poi aggiungerci qualche pubblicità e vedere</p>
+            </section>
+
+        </a>
+
+        <footer class="post-card-meta">
+
+            <ul class="author-list">
+                <li class="author-list-item">
+
+                    <div class="author-name-tooltip">
+                        Marco Giannini
+                    </div>
+
+                        <a href="/author/marco/" class="static-avatar">
+                            <img class="author-profile-image" src="//www.gravatar.com/avatar/028246b7ddf31cfc3787944b4873130d?s&#x3D;250&amp;d&#x3D;mm&amp;r&#x3D;x" alt="Marco Giannini" />
+                        </a>
+                </li>
+            </ul>
+
+            <span class="reading-time">3 min read</span>
+
+        </footer>
+
+    </div>
+
+</article>
+
+        </div>
+    </div>
+</aside>
+
+<div class="floating-header">
+    <div class="floating-header-logo">
+        <a href="https://iammarcogiannini.github.io">
+                <img src="/content/images/size/w30/2019/10/marcogiannini.png" alt="Marco Giannini icon" />
+            <span>Marco Giannini</span>
+        </a>
+    </div>
+    <span class="floating-header-divider">&mdash;</span>
+    <div class="floating-header-title">Tinson 🤖 - Un title manager per Tinfoil fatto con Node e ❤️</div>
+    <div class="floating-header-share">
+        <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
+</svg>
+</div>
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Tinson%20%F0%9F%A4%96%20-%20Un%20title%20manager%20per%20Tinfoil%20fatto%20con%20Node%20e%20%E2%9D%A4%EF%B8%8F&amp;url=https://iammarcogiannini.github.io/tinson/"
+            onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+        </a>
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://iammarcogiannini.github.io/tinson/"
+            onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+        </a>
+    </div>
+    <progress id="reading-progress" class="progress" value="0">
+        <div class="progress-container">
+            <span class="progress-bar"></span>
+        </div>
+    </progress>
+</div>
+
+
+
+
+        <footer class="site-footer outer">
+            <div class="site-footer-content inner">
+                <section class="copyright"><a href="https://iammarcogiannini.github.io">Marco Giannini</a> &copy; 2019</section>
+                <nav class="site-footer-nav">
+                    <a href="https://iammarcogiannini.github.io">Latest Posts</a>
+                    
+                    
+                    <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
+                </nav>
+            </div>
+        </footer>
+
+    </div>
+
+
+    <script>
+        var images = document.querySelectorAll('.kg-gallery-image img');
+        images.forEach(function (image) {
+            var container = image.closest('.kg-gallery-image');
+            var width = image.attributes.width.value;
+            var height = image.attributes.height.value;
+            var ratio = width / height;
+            container.style.flex = ratio + ' 1 0%';
+        })
+    </script>
+
+
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="/assets/built/jquery.fitvids.js?v=29f434ed97"></script>
+
+    <script src="/assets/built/infinitescroll.js?v=29f434ed97"></script>
+
+    <script>
+
+// NOTE: Scroll performance is poor in Safari
+// - this appears to be due to the events firing much more slowly in Safari.
+//   Dropping the scroll event and using only a raf loop results in smoother
+//   scrolling but continuous processing even when not scrolling
+$(document).ready(function () {
+    // Start fitVids
+    var $postContent = $(".post-full-content");
+    $postContent.fitVids();
+    // End fitVids
+
+    var progressBar = document.querySelector('#reading-progress');
+    var header = document.querySelector('.floating-header');
+    var title = document.querySelector('.post-full-title');
+
+    var lastScrollY = window.scrollY;
+    var lastWindowHeight = window.innerHeight;
+    var lastDocumentHeight = $(document).height();
+    var ticking = false;
+
+    function onScroll() {
+        lastScrollY = window.scrollY;
+        requestTick();
+    }
+
+    function onResize() {
+        lastWindowHeight = window.innerHeight;
+        lastDocumentHeight = $(document).height();
+        requestTick();
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(update);
+        }
+        ticking = true;
+    }
+
+    function update() {
+        var trigger = title.getBoundingClientRect().top + window.scrollY;
+        var triggerOffset = title.offsetHeight + 35;
+        var progressMax = lastDocumentHeight - lastWindowHeight;
+
+        // show/hide floating header
+        if (lastScrollY >= trigger + triggerOffset) {
+            header.classList.add('floating-active');
+        } else {
+            header.classList.remove('floating-active');
+        }
+
+        progressBar.setAttribute('max', progressMax);
+        progressBar.setAttribute('value', lastScrollY);
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', onScroll, {passive: true});
+    window.addEventListener('resize', onResize, false);
+
+    update();
+
+});
+</script>
+
+
+    
+
+</body>
+</html>
